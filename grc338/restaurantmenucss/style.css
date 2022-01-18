@@ -54,4 +54,5 @@ p {
 .description {
     line-height: 1.5em;
     font-style: italic;
+        margin-right: 2em;
 }
