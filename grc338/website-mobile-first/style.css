@@ -83,6 +83,8 @@ nav.button {
 button:hover {
     background-color: rgb(173, 139, 27);
     text-decoration: none;
+    cursor: pointer;
+
 }
 
 h2 {
