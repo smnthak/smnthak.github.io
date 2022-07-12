@@ -15,7 +15,7 @@ div.container {
 header {
     background-color: rgb(180, 180, 180);
     width: 100%;
-    padding: 1em 0em 1.5em 0em
+    padding: 1em 0em 1.5em 0em;
 }
 
 main {
@@ -66,7 +66,7 @@ nav ul li {
     position: absolute;
     bottom: 0em;
     background-color: rgba(28, 29, 31, 0.612);
-    padding: 0.7em;
+    padding: 0.7em 0.7em 0.4em 0.7em;
     width: 63%;
 }
 
