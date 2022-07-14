@@ -247,4 +247,8 @@ footer {
     div.main-story figure {
         padding-bottom: 0em;
     }
+    
+    .indent {
+        padding-left: 1.5em;
+    }
 }
