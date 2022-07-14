@@ -8,21 +8,21 @@ body {
 
 div.container {
     background-color: rgb(45, 47, 49);
-    max-width: 40em;
+    max-width: 80em;
     margin: auto;
 }
 
 header {
     background-color: rgb(180, 180, 180);
     width: 100%;
-    padding: 1em 0em 1.5em 0em;
+    padding: 1em 0em 1em 0em;
 }
 
 main {
     padding: 2em 1em 1em 1em;
 } 
 
-.larger-margin {
+.secondary {
     padding: 1.2em;
 }
 
@@ -30,31 +30,21 @@ a {
     text-decoration: none;
 }
 
+div.left-copy, div.right-copy {
+    padding: 0em 1em;
+}
+
 article p {
-    padding: 0em 1.5em 1em 1.5em;
+    padding: 0em 0em 1em 0em;
 } 
 
 section {
     padding: 0em 0em 2em 0em;
-} 
-
-nav {
-    padding: 0.5em 0em 0em 2em;
 }
 
-nav ul li {
-    padding: 0.5em;
-    display: inline;
-    text-transform: uppercase;
-    font-family: interstate, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.dark-background {
+.main-story {
     background-color: rgb(24, 25, 26);
-    padding: 1em;
-    margin-bottom: 1.5em;
+    padding: 1.5em;
 }
 
 .image-behind {
@@ -78,13 +68,26 @@ nav ul li {
     padding: 0em 0em 1em 0em;
 }
 
-.indent {
-    padding: 0em 0em 0em 0.3em;
+div.main-story figure {
+    padding-bottom: 1em;
 }
 
 img {
     width: 100%;
     display: block;
+}
+
+nav {
+    padding: 0.5em 0em 0.5em 1.5em;
+}
+
+nav ul li {
+    padding: 0.5em;
+    display: inline;
+    text-transform: uppercase;
+    font-family: interstate, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav ul li a {
@@ -97,8 +100,12 @@ nav ul li a:hover {
     color:rgb(255, 255, 255);
 }
 
+h1 {
+    width: 8em;
+    padding: 0em 0em 0em 0.5em;
+}
+
 h2 {
-    padding: 0em 0.8em 0.3em 0.8em;
     color: rgb(237, 183, 91);
     font-family: ofelia-text, sans-serif;
     font-weight: 700;
@@ -134,10 +141,6 @@ p {
     font-style: normal;
 }
 
-section p {
-    margin: 0.2em 0.5em 0em 0.5em;
-}
-
 figcaption {
     padding: 0.5em 1.5em 2em 1.5em;
     color: rgb(219, 219, 219);
@@ -160,3 +163,88 @@ footer {
     margin-top: 0;
     font-size: 0.8em;
 } 
+
+
+@media screen and (min-width:65em){
+    div.container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    header, footer {
+        display: grid;
+        grid-column: 1/3;
+    }
+
+    header {
+        width: 100%;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header nav {
+        margin: auto 0 auto 0;
+        text-align: right;
+        padding: 0em 2em 0em 0em;
+    }
+
+    main {
+        grid-column: 1/2;
+    }
+
+    div.main-story {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+        align-items: end;
+
+    }
+
+    div.secondary {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1.2em;
+        padding: 0em;
+    }
+
+    aside {
+        grid-column: 2/3;
+        background-color: rgba(67, 71, 74, 0);
+        padding-top: 3em;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    figure.main-img {
+        grid-column: 1/6;
+    }
+
+    div.left-copy {
+        grid-column: 1/4;
+        padding: 0em 0em 0em 2em;
+    }
+
+    div.right-copy {
+        grid-column: 3/6;
+    }
+
+    div.right-img {
+        grid-column: 4/6;
+        padding: 0em 2em 0em 2em;
+    }
+
+    div.left-img {
+        grid-column: 1/3;
+        padding: 0em 1em 0em 1em;
+    }
+
+    figcaption {
+        padding: 0.5em 1.5em 2em 0em;
+    }
+
+    div.main-story figure {
+        padding-bottom: 0em;
+    }
+}
