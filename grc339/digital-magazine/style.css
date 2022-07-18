@@ -18,8 +18,8 @@ header {
     padding: 1em 0em 1em 0em;
 }
 
-main {
-    padding: 2em 1em 1em 1em;
+div.photo-articles, div.gallery {
+    padding: 1em;
 } 
 
 .secondary {
@@ -45,6 +45,7 @@ section {
 .main-story {
     background-color: rgb(24, 25, 26);
     padding: 1.5em;
+    margin-top: 1em;
 }
 
 .image-behind {
@@ -77,11 +78,11 @@ img {
     display: block;
 }
 
-nav {
+header nav {
     padding: 0.5em 0em 0.5em 1.5em;
 }
 
-nav ul li {
+header nav ul li {
     padding: 0.5em;
     display: inline;
     text-transform: uppercase;
@@ -90,13 +91,13 @@ nav ul li {
     font-style: normal;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: rgb(45, 47, 49);
     padding: 0;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color:rgb(255, 255, 255);
 }
 
@@ -111,7 +112,7 @@ h2 {
     font-weight: 700;
     font-size: 1.8em;
     line-height: 1.2em;
-    padding: 0.5em 0em 0em 0em;
+    padding: 0.5em 0em 0.2em 0em;
 }
 
 h3 {
@@ -166,9 +167,50 @@ footer {
     font-size: 0.8em;
 } 
 
+div.gallery {
+    max-width: 60em;
+    margin: auto;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(100% + 6em);}
+
+main figure{
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+main figure img {
+    margin: auto;
+}
+
+input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ main figure:nth-of-type(8){
+    opacity: 1;
+}
+
+nav.gallery {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-gap: 0.2em;
+}
+
+input {
+    display: none;
+}
 
 @media screen and (min-width:65em){
-    div.container {
+    div.homepage {
         display: grid;
         grid-template-columns: 3fr 1fr;
     }
@@ -189,7 +231,7 @@ footer {
         padding: 0em 2em 0em 0em;
     }
 
-    main {
+    div.photo-articles {
         grid-column: 1/2;
     }
 
@@ -198,7 +240,6 @@ footer {
         grid-template-columns: 3fr 1fr;
         grid-gap: 1em;
         align-items: end;
-
     }
 
     div.secondary {
@@ -253,5 +294,19 @@ footer {
 
     .indent {
         padding-left: 1.5em;
+    }
+
+    div.gallery {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 0.5em;
+    }
+    div.gallery h2 {
+        display: grid;
+        grid-column: 1/3;
+    }
+    
+    nav.gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
