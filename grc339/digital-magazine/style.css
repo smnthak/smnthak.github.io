@@ -18,12 +18,16 @@ header {
     padding: 1em 0em 1em 0em;
 }
 
-div.photo-articles, div.gallery {
-    padding: 1em;
+div.photo-articles {
+    padding: 1em 1em 0em 1em;
+}
+
+div.gallery {
+    padding: 1em 1em 3em 1em;
 } 
 
 .secondary {
-    padding: 1.2em;
+    padding: 1.2em 1.2em 0em 1.2em;
 }
 
 a {
@@ -154,8 +158,12 @@ figcaption {
 }
 
 aside {
+    padding: 0em 2em 0em 2em;
+}
+
+aside.read-more {
     background-color: rgb(67, 71, 74);
-    padding: 1.7em 1.7em 0em 1.7em;
+    padding-top: 2em;
     margin: 2em 0em 0em 0em;
 } 
 
@@ -287,7 +295,7 @@ button:hover {
 }
 
 @media screen and (min-width:65em){
-    div.homepage {
+    div.homepage, div.main-article {
         display: grid;
         grid-template-columns: 3fr 1fr;
     }
@@ -326,7 +334,7 @@ button:hover {
         padding: 0em;
     }
 
-    aside {
+    aside, aside.read-more {
         grid-column: 2/3;
         background-color: rgba(67, 71, 74, 0);
         padding-top: 3em;
