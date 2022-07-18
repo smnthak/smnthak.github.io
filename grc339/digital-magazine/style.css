@@ -62,11 +62,11 @@ section {
 }
 
 .space-above {
-    padding: 1em 0em 0em 0em;
+    padding-top: 1em;
 }
 
 .space-below {
-    padding: 0em 0em 0.3em 0em;
+    padding-bottom: 0.3em;
 }
 
 div.main-story figure {
@@ -205,8 +205,85 @@ nav.gallery {
     grid-gap: 0.2em;
 }
 
-input {
+div.gallery input {
     display: none;
+}
+
+form {
+    max-width: 40em;
+    margin: auto;
+    padding: 2em;
+}
+
+section.personal-info ul li {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1em;
+}
+
+section.personal-info ul li input[type="text"],
+section ul li input[type="email"],
+section ul li input[type="tel"],
+section ul li select {
+	flex: 4 0 25em;
+	box-sizing: border-box;
+}
+
+section.personal-info ul li label {
+	flex: 0 0 10em;
+}
+
+section.order ul, section.method ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.order ul li , section.method ul li {
+	flex: 1 0 15em;
+}
+
+form ul li {
+    padding: 0;
+	list-style-type: none;
+    color: rgb(240, 240, 240);
+    font-family: interstate, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3.form {
+    color: rgb(255, 255, 255);
+    font-family: ofelia-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1em;
+    text-transform: none;
+    padding: 1em 0em 0.5em 0em;
+}
+
+button {
+    background-color: rgb(203, 158, 78);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.8em 1em 1em 1em;
+    text-transform: uppercase;
+    font-family: interstate, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.2em;
+}
+
+nav.button {
+    padding: 3em 1em 2em 0em;
+    text-align: right;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(45, 47, 49);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (min-width:65em){
