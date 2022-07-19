@@ -324,7 +324,6 @@ button:hover {
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-gap: 1em;
-        align-items: end;
     }
 
     div.secondary {
