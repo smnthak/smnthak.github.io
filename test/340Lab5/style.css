@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;	padding: 0;	border: 0;	vertical-align: baseline;} /*Eric Meyer's CSS Reset Tool*/
+
+body {
+	background-color: #7BC894; /*changes color of the whole window to pale green*/
+	margin: 3em 2em; /*creates a margin around the container*/
+}
+
+div.container {
+	max-width: 20em; /*width of the div can't get bigger than 20em*/
+	margin: auto; /*centers content*/
+	display: grid; /*makes the div a grid container*/
+	grid-template-rows: 1fr auto; /*the first grid item takes up one fraction and the second takes up the rest*/
+	grid-gap: 1em; /*adds a gap between each grid item*/
+}
+
+div.loginWindow, div.updateWindow {
+	background-color: #ECECEC; /*changes color of the smaller divs to light grey*/
+	padding: 4em 4em 2em 4em; /*adds padding to the divs*/
+}
+
+ul {
+	list-style-type: none; /*removes bullets*/
+}
+
+h3 {
+    text-transform: uppercase; /*capitalizes all text*/
+    letter-spacing: 0.1em; /*adds spacing between letters*/
+	text-align: center; /*centers text*/
+	margin-bottom: 1em; /*adds space beneath h3*/
+	
+	/*font styling*/
+	font-family: sofia-pro, sans-serif; /**/
+    font-weight: 400;
+    font-style: normal;
+}
+
+h4 {
+	text-align: center; /*centers text*/
+	
+	/*font styling*/
+	font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul li {
+	margin-top: 0.4em; /*adds spacing above each list item*/
+	
+	/*font styling*/
+	font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input.button {
+    background-color: #257E42; /*changes color of the button box to dark green*/
+    border: none; /*removes button's border*/
+    color: #FFFFFF; /*changes color of the button text to white*/
+    text-align: center; /*centers text*/
+    padding: 1em; /*adds padding inside the button*/
+    text-transform: uppercase; /*capitalizes all text*/
+	display: grid; /*makes button a grid item*/
+	margin: 2em auto; /*centers button horizontally and adds space above*/
+	
+	/*font styling*/
+	font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.2em;
+}
+
+input.button:hover {
+    background-color: #7BC894; /*changes color of the button box to light green when hovering*/
+    color: #000000; /*changes color of the button text to black when hovering*/
+    cursor: pointer; /*changes cursor to a pointer when hovering*/
+}
+
+h6 {
+	text-align: right; /*aligns text to the right*/
+	text-transform: uppercase; /*capitalizes all text*/
+	
+	/*font styling*/
+	font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div.updateWindow {
+	display: none; /*hides Update Account div*/
+}
