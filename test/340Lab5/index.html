@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lab Five</title>
+	<!--link to fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/qjj3vec.css">
+	<!--link to css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="loginWindow" id="loginWindow">
+			<h3>Account Login</h3>
+			<!--user input-->
+			<form>
+				<!--account login text boxes-->
+				<ul>
+					<li>
+						<label for="username">Username</label> 
+						<input type="text" name="username" id="username" />
+					</li>
+					<li>
+						<label for="pwd">Password</label> 
+						<input type="password" name="pwd" id="pwd" />
+					</li>
+				</ul>
+			</form>
+			
+			<!--button to login-->
+			<input class= "button" type="button" value="Log In" id="loginButton">
+			<h4 id="loginOutput"></h4>
+		</div>
+		
+		<div class = "updateWindow" id="updateWindow">
+			<h3>Update Account Information</h3>
+			<!--user input-->
+			<form>
+				<!--update information text boxes-->
+				<ul>
+					<li>
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+					</li>
+					<li>
+						<label for="phone">Phone</label>
+						<input type="tel" name="phone" id="phone" />
+					</li>
+					<li>
+						<label for="credit">Credit Card</label>
+						<input type="text" name="credit" id="credit" />
+						<h6 id="creditType"></h6>
+					</li>
+				</ul>
+			</form>
+			
+			<!--button to update information-->
+			<input class= "button" type="button" value="Update" id="updateButton">
+			<h4 id="updateOutput"></h4>
+		</div>
+	</div>
+</body>
+	
+	<!--link to js file-->
+	<script src="js/script.js"></script>
+</html>
